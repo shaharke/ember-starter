@@ -1,26 +1,17 @@
 define(['App',
         'ember',
-        'text!templates/index.html',
-        'controllers/IndexController'
+        'text!templates/about.html'
         ],
 
-    function (App, Ember, indexTemplate) {
-      App.IndexView =  Ember.View.extend( {
-        templateName : 'index',
+    function (App, Ember, aboutTemplate) {
+      App.AboutView =  Ember.View.extend( {
+        templateName : 'about',
 
-        nameBinding: "controller.name",
-
-        greeting : function() {
-          var name = this.get('name');
-          if (name) {
-            return "Hello " + name;
-          }
-          return ""
-        }.property('name')
+        name : 'Shahar' //TODO: bind to index controller
 
       });
 
-      Ember.TEMPLATES['index'] = Ember.Handlebars.compile(indexTemplate);
+      Ember.TEMPLATES['about'] = Ember.Handlebars.compile(aboutTemplate);
 
-      return App.IndexView
+      return App.AboutView
     });
