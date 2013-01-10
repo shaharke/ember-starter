@@ -1,3 +1,7 @@
 <span>Name: </span>{{view Ember.TextField valueBinding="name"}}
-<button {{action greet}}>Greet me!</button>
 <div>{{view.greeting}}</div>
+
+<nav>
+    {{#linkTo "about"}}About{{/linkTo}}
+</nav>
+

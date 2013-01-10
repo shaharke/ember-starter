@@ -1,1 +1,2 @@
-define(['views/IndexView'], function() {});
+define(['views/IndexView',
+        'views/AboutView'], function() {});
