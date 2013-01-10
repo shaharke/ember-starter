@@ -1,5 +1,3 @@
-define([
-  'ember', 'text!templates/landingPage.html'
-], function (Ember) {
+define(['ember'], function (Ember) {
   return Ember.Application.create({});
 });

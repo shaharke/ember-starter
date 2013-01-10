@@ -1,1 +1,1 @@
-define(['views/LandingPageView'], function() {});
+define(['views/IndexView'], function() {});

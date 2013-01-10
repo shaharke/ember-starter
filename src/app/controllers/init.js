@@ -1,1 +1,1 @@
-define(['controllers/LandingPageController'], function() {});
+define(['controllers/IndexController'], function() {});
