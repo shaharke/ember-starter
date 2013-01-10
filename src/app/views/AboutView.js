@@ -7,7 +7,7 @@ define(['App',
       App.AboutView =  Ember.View.extend( {
         templateName : 'about',
 
-        name : 'Shahar' //TODO: bind to index controller
+        nameBinding : 'App.mock.user.name' // Global bindings
 
       });
 

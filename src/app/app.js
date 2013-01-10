@@ -1,3 +1,5 @@
 define(['ember'], function (Ember) {
-  return Ember.Application.create({});
+  var App = Ember.Application.create({});
+  window.App = App;
+  return App
 });
