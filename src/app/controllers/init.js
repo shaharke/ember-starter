@@ -1,2 +1,1 @@
-define(['controllers/IndexController',
-        'controllers/AboutController'], function() {});
+define(['controllers/IndexController'], function() {});
