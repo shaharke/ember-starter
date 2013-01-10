@@ -1,15 +1,26 @@
-define(["App",
-        "ember",
-        "text!templates/landingPage.html"],
+define(['App',
+        'ember',
+        'text!templates/landingPage.html',
+        'controllers/LandingPageController'
+        ],
 
-    function( App, Ember, template) {
-      App.reopen({
-        LandingPageView : Ember.View.extend( {
+    function (App, Ember, landingPageTemplate) {
+      App.LandingPageView =  Ember.View.extend( {
+        templateName : 'landingPage',
 
-          template : Ember.Handlebars.compile(template)
-        })
+        nameBinding: "controller.name",
+
+        greeting : function() {
+          var name = this.get('name');
+          if (name) {
+            return "Hello " + name;
+          }
+          return ""
+        }.property('name')
 
       });
 
-      return App.LandingPageView;
-});
+      Ember.TEMPLATES['landingPage'] = Ember.Handlebars.compile(landingPageTemplate);
+
+      return App.LandingPageView
+    });

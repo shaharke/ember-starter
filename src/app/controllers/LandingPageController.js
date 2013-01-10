@@ -1,8 +1,9 @@
 define(["ember", "App"], function(Ember, App){
-  App.reopen({
-    LandingPageController : Ember.Controller.extend({
-      name : "Shahar Kedar"
-    })
+
+  App.LandingPageController = Ember.ObjectController.extend({
+      name : ""
   });
-  return App.LandingPageController
+
+  return App.LandingPageController;
+
 });

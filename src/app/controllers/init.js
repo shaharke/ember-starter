@@ -1,0 +1,1 @@
+define(['controllers/LandingPageController'], function() {});

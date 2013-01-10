@@ -19,7 +19,6 @@ define({
     'handlebars': 'libs/handlebars/1.0.rc.1/handlebars',
     'ember': 'libs/ember/1.0.0-pre2.1/ember',
     'bootstrap': 'libs/bootstrap.min',
-    'domReady': 'libs/domReady',
 
     /*plugins*/
     'text' : 'libs/require/2.1.2/text'

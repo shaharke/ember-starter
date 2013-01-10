@@ -1,2 +1,3 @@
-Hello {{name}}
-<div {{action foo target=view}}>Action</div>
+<span>Name: </span>{{view Ember.TextField valueBinding="name"}}
+<button {{action greet}}>Greet me!</button>
+<div>{{view.greeting}}</div>
