@@ -1,10 +1,7 @@
 define(['App',
-        'ember',
-        'text!templates/index.html',
-        'controllers/IndexController'
-        ],
+        'ember'],
 
-    function (App, Ember, indexTemplate) {
+    function (App, Ember) {
       App.IndexView =  Ember.View.extend( {
         templateName : 'index',
 
@@ -19,8 +16,6 @@ define(['App',
         }.property('name')
 
       });
-
-      Ember.TEMPLATES['index'] = Ember.Handlebars.compile(indexTemplate);
 
       return App.IndexView
     });

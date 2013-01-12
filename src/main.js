@@ -5,7 +5,8 @@
       'App',
       'Router',
       'views/init',
-      'controllers/init'],
+      'controllers/init',
+      'templates/init'],
 
         function () {
 

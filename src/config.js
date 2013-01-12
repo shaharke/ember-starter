@@ -21,8 +21,7 @@ define({
     'bootstrap': 'libs/bootstrap.min',
 
     /*plugins*/
-    'text' : 'libs/require/2.1.2/text',
-    'domReady' : 'libs/require/2.1.2/domReady'
+    'text' : 'libs/require/2.1.2/text'
 
   }
 });

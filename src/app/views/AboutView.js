@@ -1,9 +1,7 @@
 define(['App',
-        'ember',
-        'text!templates/about.html'
-        ],
+        'ember'],
 
-    function (App, Ember, aboutTemplate) {
+    function (App, Ember) {
       App.AboutView =  Ember.View.extend( {
         templateName : 'about',
 
@@ -17,8 +15,6 @@ define(['App',
         }
 
       });
-
-      Ember.TEMPLATES['about'] = Ember.Handlebars.compile(aboutTemplate);
 
       return App.AboutView
     });
