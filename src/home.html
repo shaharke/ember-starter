@@ -1,0 +1,67 @@
+<!doctype html>
+<!--[if lt IE 7 ]>
+<html lang="en" class="ie6"> <![endif]--> <!--[if IE 7 ]>
+<html lang="en" class="ie7"> <![endif]--> <!--[if IE 8 ]>
+<html lang="en" class="ie8"> <![endif]--> <!--[if IE 9 ]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <script type="text/javascript" src="libs/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript" src="libs/handlebars/1.0.rc.1/handlebars.js"></script>
+    <script type="text/javascript" src="libs/ember/1.0.0-pre2.1/ember.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Application Template -->
+<script type="text/x-handlebars">
+    <header>
+        <h1>Shahar's Blog</h1>
+    </header>
+
+    <div>
+        {{outlet}}
+    </div>
+
+    <footer>
+        &copy;2013 Shahar's Publishing, Inc.
+    </footer>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+    <span>Name: </span>{{view Ember.TextField valueBinding="name"}}
+    <div>{{view.greeting}}</div>
+
+    <div
+    {{action "foo" on="click" target="controller"}} >Test</div>
+    <nav>
+        {{#linkTo "about"}}About{{/linkTo}}
+    </nav>
+</script>
+
+<script type="text/x-handlebars" data-template-name="about">
+    {{view.name}} is that man!
+    <button
+    {{action "foo" target="view"}} >Action on view</button>
+    <button
+    {{action "foo" target="controller"}}>Action on controller</button>
+</script>
+
+</body>
+</html>
