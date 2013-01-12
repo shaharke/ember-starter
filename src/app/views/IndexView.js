@@ -8,7 +8,7 @@ define(['App',
       App.IndexView =  Ember.View.extend( {
         templateName : 'index',
 
-        nameBinding: "controller.name",
+        nameBinding: "controller.name", //Local bindings
 
         greeting : function() {
           var name = this.get('name');
